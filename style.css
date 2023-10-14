@@ -27,7 +27,7 @@ body {
 
 .about {
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     /* This transformation is characterized by a two-dimensional vector. Its coordinates define how much the element moves in each direction. */
