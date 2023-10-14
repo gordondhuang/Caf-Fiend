@@ -12,7 +12,7 @@ body {
 /* Syle for quote-box class */
 .intro {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     /* This transformation is characterized by a two-dimensional vector. Its coordinates define how much the element moves in each direction. */
@@ -23,4 +23,14 @@ body {
 
 .intro h1 {
     font-size: 75px;
+}
+
+.about {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* This transformation is characterized by a two-dimensional vector. Its coordinates define how much the element moves in each direction. */
+    border-radius: 10px;
+    text-align: center;
 }
