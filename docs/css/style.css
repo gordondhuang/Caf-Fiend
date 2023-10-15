@@ -123,7 +123,6 @@ h1 {
     border-radius: 4px;
 }
 
-<<<<<<< HEAD
 .chart img {
     width: 400px;
     margin-right: 10px;
@@ -133,14 +132,11 @@ h1 {
     background-color: #99A0A1;
     padding: 40px 40px;
     border-radius: 40px;
-=======
-.top {
-    padding: 10px;
 }
 
-.icons {
+.inputbuttons img {
     background-color: #6C584C;
-    padding: 5px;
-    border-radius: 4px;
->>>>>>> 0c0f1bb70078684a8cf6240d1578194b1fa6d27d
+    padding: 40px 40px;
+    border-radius: 100px;
+    width: 200px;
 }
