@@ -50,8 +50,11 @@
         </div>
         <!--Chart Data-->
         <h2 id="currentDay">Today is <span id="currentWeekDay"></span></h2>
-        <div id="chart">
+        <div id="caffeineChart-container">
             <canvas id="myChart" ></canvas>
+        </div>
+        <div id="waterChart-container">
+            <canvas id="waterChart"></canvas>
         </div>
         <script src="charts.js"></script>
         <!--Image-->
@@ -102,10 +105,13 @@
 
             const weekday = daysOfWeek[currentDay];
             let currentCaffeine = parseFloat(document.getElementById('caffeine-amount').innerHTML)
+            let currentWater = parseFloat(document.getElementById('water-amount').innerHTML)
             console.log("currrent caffeine" + currentCaffeine)
-            chartData.datasets[0].data[currentDay] = currentCaffeine;
+            caffeineData.datasets[0].data[currentDay] = currentCaffeine;
+            waterData.datasets[0].data[currentDay] = currentWater;
 
             myChart.update();
+            waterChart.update();
         }
       </script>
 </body>

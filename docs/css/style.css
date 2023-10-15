@@ -218,8 +218,20 @@ h1 {
 .alert {
     margin-top: 70px;
 }
-#chart {
+#caffeineChart-container {
     top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw; /* Adjust the width as needed */
+    height: 40vh; /* Adjust the height as needed */
+}
+
+#waterChart-container {
+    margin-top:60vh;
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
@@ -237,6 +249,6 @@ h1 {
 }
 
 #file-upload {
-    margin-top:50vh;
-    margin-left: 30vw;
+    margin-top:40vh;
+    margin-left: 70vw;
 }
