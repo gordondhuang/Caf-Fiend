@@ -258,3 +258,34 @@ h1 {
     margin-top:40vh;
     margin-left: 70vw;
 }
+
+.loginhead {
+    color: #ADC178;
+    margin-bottom: 40px;
+}
+
+.loginbox {
+    background: #6C584C;
+    padding-top: 50px;
+    padding-bottom: 75px;
+    padding-left: 70px;
+    padding-right: 90px;
+    margin-top: 110px;
+    margin-left: 100px;
+    margin-right: 400px;
+    border-radius: 40px;
+}
+
+.form-control {
+    margin-bottom: 40px;
+}
+
+.logininfo {
+    margin-bottom: 15px;
+    color: #DDE5B6;
+}
+
+.loginbox p {
+    color: #ffffff;
+    margin-top: 20px;
+}
