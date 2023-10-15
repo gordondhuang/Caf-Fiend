@@ -171,3 +171,22 @@ h1 {
     border-radius: 4px;
 }
 
+.learn {
+    position: absolute;
+    text-align: center;
+    color:rgb(255, 255, 255)
+}
+
+#heading {
+    text-align: center;
+    color: black;
+}
+
+.aboutboxes {
+    background: #6C584C;
+    padding: 10px;
+}
+
+#imgtop {
+    width: 200px;
+}
