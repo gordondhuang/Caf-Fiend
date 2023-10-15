@@ -46,7 +46,7 @@
         <div class="input-group">
             <input type="text" class="form-control" placeholder="Drink Name" id="drink-input">
             <input type="text" class="form-control" placeholder="Ounces Drank" id="oz-input">
-            <button class="btn btn-outline-secondary" type="button" onclick="caffeineInput()" id="enter-button">Enter</button>
+            <button class="btn btn-outline-secondary" type="button" onclick="caffeineInput(); updateChart()" id="enter-button">Enter</button>
         </div>
         <!--Chart Data-->
         <h2 id="currentDay">Today is <span id="currentWeekDay"></span></h2>
@@ -91,6 +91,22 @@
             .catch(error => {
               console.error('Error:', error);
             });
+        }
+      </script>
+      <script>
+        function updateChart(){
+            const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday','Saturday'];
+
+            const currentDate = new Date();
+            const currentDay = currentDate.getDay();
+
+            const weekday = daysOfWeek[currentDay];
+            console.log(currentDay);
+            let currentCaffeine = parseFloat(document.getElementById('caffeine-amount').innerHTML)
+            chartData.datasets[0].data[currentDay] = currentCaffeine;
+
+            // Update the chart with the new data
+            myChart.update();
         }
       </script>
 </body>
