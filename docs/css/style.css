@@ -165,3 +165,9 @@ h1 {
     left: 80%;
 }
 
+.icons {
+    padding: 4px;
+    background-color: #6c584c;
+    border-radius: 4px;
+}
+
