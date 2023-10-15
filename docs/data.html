@@ -69,11 +69,23 @@
 
                 // get the caffeineName passed in
                 const drinkName = (document.getElementById('drink-input').value).toLowerCase().replace(" ", "");
+                
                 // Get the value from the input field
                 if (CaffineCount.has(drinkName)){
-                    let drinkAmount = parseFloat(amountOfOunces.value) * CaffineCount.get(drinkName);
-                    caffeine.textContent = parseInt(caffeine.textContent) - drinkAmount;
-                }
+
+                    let drinkAmountCaffiene = parseFloat(parseFloat(amountOfOunces.value) * CaffineCount.get(drinkName));
+
+                    if (drinkAmountCaffiene > parseFloat(caffeine.textContent)){
+                        caffeine.textContent = 0.0;
+                    }
+                    else{
+                        let drinkAmountWater = parseFloat(.07 * drinkAmountCaffiene);
+
+                        caffeine.textContent = (parseFloat(parseFloat(caffeine.textContent) - drinkAmountCaffiene)).toFixed(1);
+                        water.textContent = (parseFloat(water.textContent) + drinkAmountWater).toFixed(1);
+                    }
+
+                }   
                 else{
                     // please display this on screen if possible
                     console.log(`${drinkName} is not available`);
