@@ -1,4 +1,5 @@
 const fs = require('fs');
+const http = require('http');
 
 document.addEventListener('DOMContentLoaded', function() {
   // Get references to the input field and the output element
@@ -16,6 +17,17 @@ document.addEventListener('DOMContentLoaded', function() {
       const currentCaffeine = parseInt(caffeine.textContent);
       const textContent = parseInt(water.textContent);
   });
+});
+
+// Create an HTTP server
+const server = http.createServer((req, res) => {
+  // Handle HTTP requests here
+});
+
+// Start the server on a specific port
+const port = 3000;
+server.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
 
 // Read the JSON data from "caffeine_database.json" file
