@@ -138,5 +138,17 @@ h1 {
     background-color: #6C584C;
     padding: 40px 40px;
     border-radius: 100px;
-    width: 200px;
+    width: 175px;
+}
+
+#search {
+    position: absolute;
+    bottom: 20%;
+    left: 80%;
+}
+
+#scan {
+    position: absolute;
+    bottom: 60%;
+    left: 80%;
 }
