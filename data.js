@@ -1,6 +1,14 @@
 const fs = require('fs');
 const http = require('http');
 
+// name : mg/FL
+CaffineCount = {
+  "redbull": 9.5,
+  "monster": 10,
+  "celsius": 12,
+  "c4": 12.4
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   // Get references to the input field and the output element
   const caffeine = document.getElementById('caffeine-amount')
@@ -10,12 +18,23 @@ document.addEventListener('DOMContentLoaded', function() {
   const amountOfCaffeine = document.getElementById('caffeine-input');
   const amountOfOunces = document.getElementById('oz-input');
   button.addEventListener('click', function() {
-      // Get the value from the input field
       const caffeineValue = amountOfCaffeine.value;
       const ouncesValue = amountOfOunces.value;
       
       const currentCaffeine = parseInt(caffeine.textContent);
       const textContent = parseInt(water.textContent);
+
+      // get the caffeineName passed in
+      const drinkName = document.getElementById('drink-input').toLowerCase().replace(" ", "");
+      // Get the value from the input field
+      if (CaffineCount.has(drinkName)){
+        const caffeineValue = int(CaffineCount[drinkName] * ouncesValue);
+        document.getElementById("caffeine-amount").innerHTML = int (currentCaffeine - caffeineValue);
+      }
+      else{
+        console.log(`${drinkName} is not available`);
+      }
+
   });
 });
 
