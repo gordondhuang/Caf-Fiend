@@ -6,6 +6,7 @@
     <title>Data</title>
     <!-- Charts CSS -->
     <link rel="stylesheet" href="path/to/your/charts.min.css">
+    <link rel="stylesheet" href="path/to/your/charts.css">
     <link rel="stylesheet" href="./css/style.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -15,6 +16,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="caffeine_database.json"></script>
     <script src="data.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -37,9 +39,6 @@
                     <h6 style="display: inline;">oz</h6>
                 </div>
             </nav> 
-            <nav class="chart">
-                <img src="./images/png/chart.png">
-            </nav>
         </nav>        
           <nav class="inputbuttons">
             <img id="scan" src="./images/svg/scan-white.svg">
@@ -50,6 +49,11 @@
             <input type="text" class="form-control" placeholder="Ounces Drank">
             <button class="btn btn-outline-secondary" type="button">submit</button>
         </div>
+        <!--Chart Data-->
+        <div id="chart">
+            <canvas id="myChart" ></canvas>
+        </div>
+        <script src="charts.js"></script>
     </main>
 </body>
 </html>

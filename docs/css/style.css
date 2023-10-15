@@ -184,3 +184,14 @@ h1 {
 #imgtop {
     width: 200px;
 }
+#chart {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw; /* Adjust the width as needed */
+    height: 40vh; /* Adjust the height as needed */
+}
