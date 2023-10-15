@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data</title>
-    <!-- Charts CSS -->
-    <link rel="stylesheet" href="path/to/your/charts.min.css">
-    <link rel="stylesheet" href="path/to/your/charts.css">
     <link rel="stylesheet" href="./css/style.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -18,7 +15,7 @@
     <script src="data.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="solution.js"></script>
-    <script src="caffeine-parser.js"></script>
+    <script defer src="caffeine-parser.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -49,7 +46,7 @@
         <div class="input-group">
             <input type="text" class="form-control" placeholder="Drink Name" id="drink-input">
             <input type="text" class="form-control" placeholder="Ounces Drank" id="oz-input">
-            <button class="btn btn-outline-secondary" type="button" onclick="caffeineChange()">Enter</button>
+            <button class="btn btn-outline-secondary" type="button" onclick="caffeineInput()" id="enter-button">Enter</button>
         </div>
         <!--Chart Data-->
         <h2 id="currentDay">Today is <span id="currentWeekDay"></span></h2>
@@ -67,6 +64,35 @@
             </div>
         </div>
     </main>
+    <script>
+        // Define caffeineInput function in the global scope
+        function caffeineInput() {
+          const drinkName = document.getElementById('drink-input').value;
+    
+          let currentCaffeine = parseFloat(document.getElementById('caffeine-amount').innerHTML);
+          let caffeineValue = 0;
+    
+          // You should fetch your JSON data from a web server here, instead of using Node.js fs
+          fetch('caffeine_database.json')
+            .then(response => response.json())
+            .then(jsonData => {
+                jsonData.forEach((drink) => {
+                if (drinkName == drink.Drink && currentCaffeine > 0) {
+                    let drinkAmountCaffeine = parseFloat(drink['Caffeine (mg)']);
+                    console.log('caffeine:', drink.Drink)
+                    console.log('Caffeine mg:', drink['Caffeine (mg)']);
+                    caffeineValue = parseFloat(drink['Caffeine (mg)']);
+                    document.getElementById('caffeine-amount').innerHTML = parseInt(currentCaffeine - drinkAmountCaffeine);
+                } else if(drinkName == drink.Drink){
+                    console.log("drank too much!")
+                }
+                });
+            })
+            .catch(error => {
+              console.error('Error:', error);
+            });
+        }
+      </script>
 </body>
 </html>
 <!---->
