@@ -126,3 +126,9 @@ h1 {
 .top {
     padding: 10px;
 }
+
+.icons {
+    background-color: #6C584C;
+    padding: 5px;
+    border-radius: 4px;
+}
