@@ -122,3 +122,14 @@ h1 {
     background-color: #8EBDD7;
     border-radius: 4px;
 }
+
+.chart img {
+    width: 400px;
+    margin-right: 10px;
+    position: absolute;
+    bottom: 25%;
+    left: 36%;
+    background-color: #99A0A1;
+    padding: 40px 40px;
+    border-radius: 40px;
+}
