@@ -53,40 +53,34 @@
     </main>
     <script>
         function caffeineChange(){
-            document.addEventListener("DOMContentLoaded", function() {
+            // document.addEventListener("DOMContentLoaded", function() {
                 // name : mg/FL
-                CaffineCount = {
-                "redbull": 9.5,
-                "monster": 10,
-                "celsius": 12,
-                "c4": 12.4
-                }
-                // Get references to the input field and the output element
+                const CaffineCount = new Map([
+                    ["redbull", 9.5],
+                    ["monster", 10],
+                    ["celsius", 12],
+                    ["c4", 12.4]
+                ]);
                 const caffeine = document.getElementById('caffeine-amount')
                 const water = document.getElementById('water-amount')
-
-                // Get a reference to the button and add a click event listener
-                const amountOfCaffeine = document.getElementById('caffeine-input');
+                const amountOfCaffeine = document.getElementById('drink-input');
                 const amountOfOunces = document.getElementById('oz-input');
-                const caffeineValue = amountOfCaffeine.value;
-                const ouncesValue = amountOfOunces.value;
-                
-                const currentCaffeine = parseInt(caffeine.textContent);
-                const textContent = parseInt(water.textContent);
+                const currCaffeine = caffeine.value;
 
                 // get the caffeineName passed in
-                const drinkName = document.getElementById('drink-input').toLowerCase().replace(" ", "");
+                const drinkName = (document.getElementById('drink-input').value).toLowerCase().replace(" ", "");
                 // Get the value from the input field
                 if (CaffineCount.has(drinkName)){
-                    console.log(yes);
-                    const caffeineValue = int(CaffineCount[drinkName] * ouncesValue);
-                    document.getElementById("caffeine-amount").innerHTML = int(currentCaffeine - caffeineValue);
+                    console.log("yes");
+                    caffeine.value = currCaffeine - (CaffineCount[drinkName] * parseInt(amountOfOunces.value));
+                    print(caffeine.value);
+                    caffeine.innerHTML = caffeine.value;
                 }
                 else{
                     console.log(`${drinkName} is not available`);
                 }
-                console.log("end");
-            });
+                console.log("end")
+            // });
             
         }
     </script>
