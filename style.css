@@ -49,11 +49,18 @@ body {
     font-size: 16px;
     border-radius: 4px;
     transition-duration: .3s;
+    box-shadow: 0 9px #999;
 }
 
 .button:hover {
     background-color: #A98467;
 }
+
+.button:active {
+    background-color: #A98467;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 
 #gs {
     position: absolute;
