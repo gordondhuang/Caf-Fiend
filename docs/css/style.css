@@ -8,6 +8,8 @@
 
 body {
     background: #F0EAD2;
+    margin: 0;
+    padding: 0;
 }
 
 .intro {
@@ -34,7 +36,7 @@ body {
 }
 
 .intro img {
-    width: 400px;
+    width: 550px;
     margin-right: 10px;
 }
 
