@@ -83,3 +83,40 @@ h1 {
     text-align: left;
     font-size: 10px;
 }
+
+.trackers {
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    transition-duration: .3s;
+}
+
+#caffeine {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    background-color: #A98467;
+    padding: 15px 32px;
+}
+
+#water {
+    position: absolute;
+    bottom: 25%;
+    left: 10%;
+    background-color: #67A5A9;
+    padding: 15px 50px;
+}
+
+#caffeinenum {
+    background-color: #8ED7A7;
+    border-radius: 4px;
+}
+
+#waternum {
+    background-color: #8EBDD7;
+    border-radius: 4px;
+}
