@@ -54,3 +54,15 @@ body {
 .button:hover {
     background-color: #A98467;
 }
+
+#gs {
+    position: absolute;
+    top: 75%;
+    right: 60%;
+}
+
+#lm {
+    position: absolute;
+    top: 75%;
+    left: 60%;
+}
