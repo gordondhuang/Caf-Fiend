@@ -1,12 +1,21 @@
 // Get the canvas element where the chart will be rendered
 const ctx = document.getElementById('myChart').getContext('2d');
-const date = new Date();
+
+const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+const currentDate = new Date();
+const currentDay = currentDate.getDay();
+
+const weekday = daysOfWeek[currentDay];
+
+document.getElementById("currentWeekDay").innerHTML = weekday;
+
 // Define your chart data and options
 const chartData = {
-    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday','Saturday','Sunday'],
     datasets: [{
         label: 'Caffeine',
-        data: [400, 400, 400, 400, 400], // Example data
+        data: [400, 400, 400, 400, 400, 400, 400], // Example data
         backgroundColor: 'rgba(108,88,76,1)', // Example background color
         borderColor: 'rgba(75, 192, 192, 1)', // Example border color
         borderWidth: 1, // Example border width

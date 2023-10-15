@@ -195,3 +195,9 @@ h1 {
     width: 40vw; /* Adjust the width as needed */
     height: 40vh; /* Adjust the height as needed */
 }
+
+#currentDay{
+    color:#6C584C;
+    margin-top:5rem;
+    text-align: center;
+}
