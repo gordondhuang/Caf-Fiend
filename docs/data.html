@@ -86,6 +86,9 @@
                     caffeineValue = parseFloat(drink['Caffeine (mg)']);
                     document.getElementById('caffeine-amount').innerHTML = parseInt(currentCaffeine + caffeineValue);
                     document.getElementById('water-amount').innerHTML = parseInt(currentWater + parseInt(caffeineValue*0.07))
+                    if(currentCaffeine + caffeineValue >= 400){
+                        document.getElementById("caffeinenum").style.backgroundColor = "red";
+                    }
                     updateChart();
                 } else if(drinkName == drink.Drink){
                     console.log("drank too much!")
