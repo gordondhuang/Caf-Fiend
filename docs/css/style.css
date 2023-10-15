@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:Arial, Helvetica, sans-serif
+    font-family: 'Inter', sans-serif;
     
 }
 
@@ -22,6 +23,11 @@ body {
     text-align: center;
 }
 
+#motto {
+    margin-top: 10px;
+    color: #ADC178;
+}
+
 .intro h1 {
     font-size: 75px;
 }
@@ -33,10 +39,11 @@ body {
     right: 10%;
     border-radius: 10px;
     text-align: center;
+    font-size: 20px;
 }
 
 .intro img {
-    width: 550px;
+    width: 600px;
     margin-right: 10px;
 }
 
@@ -44,11 +51,11 @@ body {
     background-color: #6c584c; 
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 30px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
     border-radius: 4px;
     transition-duration: .3s;
     box-shadow: 0 9px #999;
@@ -94,6 +101,8 @@ h1 {
     font-size: 16px;
     border-radius: 4px;
     transition-duration: .3s;
+    width: 225px;
+    height: 150px;
 }
 
 #caffeine {
@@ -115,11 +124,15 @@ h1 {
 #caffeinenum {
     background-color: #8ED7A7;
     border-radius: 4px;
+    height: 60px;
+    text-align: center;
 }
 
 #waternum {
     background-color: #8EBDD7;
     border-radius: 4px;
+    height: 60px;
+    text-align: center;
 }
 
 .chart img {
@@ -138,6 +151,8 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .inputbuttons img {
@@ -163,6 +178,7 @@ h1 {
     padding: 4px;
     background-color: #6c584c;
     border-radius: 4px;
+    width: 40px;
 }
 
 .learn {
@@ -174,14 +190,31 @@ h1 {
 #heading {
     text-align: center;
     color: black;
+    font-size: 75px;
+    margin-top: 50px;
 }
 
 .aboutboxes {
     background: #6C584C;
-    padding: 10px;
+    padding: 50px;
+    margin-top: 110px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 40px;
+
 }
 
 #imgtop {
     width: 200px;
-    
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.aboutheads {
+    color: #ADC178;
+
+}
+
+.alert {
+    margin-top: 70px;
 }
