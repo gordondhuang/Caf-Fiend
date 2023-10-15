@@ -34,7 +34,7 @@
             <nav class="trackers" id="water">
                 <h2>Water<img id="drinkicons" src="./images/svg/water-white.svg"></h2>
                 <div id="waternum">
-                    <h2 style="display: inline;" id="water-amount">28</h2>
+                    <h2 style="display: inline;" id="water-amount">0</h2>
                     <h6 style="display: inline;">oz</h6>
                 </div>
             </nav> 
@@ -70,6 +70,7 @@
           const drinkName = document.getElementById('drink-input').value;
     
           let currentCaffeine = parseFloat(document.getElementById('caffeine-amount').innerHTML);
+          let currentWater = parseFloat(document.getElementById('water-amount').innerHTML);
           let caffeineValue = 0;
     
           // You should fetch your JSON data from a web server here, instead of using Node.js fs
@@ -77,12 +78,11 @@
             .then(response => response.json())
             .then(jsonData => {
                 jsonData.forEach((drink) => {
-                if (drinkName == drink.Drink && currentCaffeine > 0) {
+                if (drinkName.toLowerCase() == drink.Drink.toLowerCase() && currentCaffeine > 0) {
                     let drinkAmountCaffeine = parseFloat(drink['Caffeine (mg)']);
-                    console.log('caffeine:', drink.Drink)
-                    console.log('Caffeine mg:', drink['Caffeine (mg)']);
                     caffeineValue = parseFloat(drink['Caffeine (mg)']);
                     document.getElementById('caffeine-amount').innerHTML = parseInt(currentCaffeine - drinkAmountCaffeine);
+                    document.getElementById('water-amount').innerHTML = parseInt(currentWater + parseInt(caffeineValue*0.07))
                 } else if(drinkName == drink.Drink){
                     console.log("drank too much!")
                 }
@@ -101,11 +101,10 @@
             const currentDay = currentDate.getDay();
 
             const weekday = daysOfWeek[currentDay];
-            console.log(currentDay);
             let currentCaffeine = parseFloat(document.getElementById('caffeine-amount').innerHTML)
+            console.log("currrent caffeine" + currentCaffeine)
             chartData.datasets[0].data[currentDay] = currentCaffeine;
 
-            // Update the chart with the new data
             myChart.update();
         }
       </script>
