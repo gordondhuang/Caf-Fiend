@@ -134,21 +134,16 @@ h1 {
     border-radius: 40px;
 }
 
+.top {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .inputbuttons img {
     background-color: #6C584C;
-    padding: 40px 40px;
-    border-radius: 100px;
-    width: 175px;
-}
-
-#search {
-    position: absolute;
-    bottom: 20%;
-    left: 80%;
-}
-
-#scan {
-    position: absolute;
-    bottom: 60%;
-    left: 80%;
+    padding: 5px;
+    border-radius: 4px;
+>>>>>>> 0c0f1bb70078684a8cf6240d1578194b1fa6d27d
 }
