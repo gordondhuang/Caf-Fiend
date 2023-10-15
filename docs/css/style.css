@@ -170,7 +170,13 @@ h1 {
 
 #scan {
     position: absolute;
-    top: 43%;
+    top: 25%;
+    left: 80%;
+}
+
+#upload {
+    position: absolute;
+    bottom: 25%;
     left: 80%;
 }
 
