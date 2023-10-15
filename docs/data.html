@@ -53,7 +53,6 @@
     </main>
     <script>
         function caffeineChange(){
-            // document.addEventListener("DOMContentLoaded", function() {
                 // name : mg/FL
                 const CaffineCount = new Map([
                     ["redbull", 9.5],
@@ -61,27 +60,24 @@
                     ["celsius", 12],
                     ["c4", 12.4]
                 ]);
+
+                // Elements
                 const caffeine = document.getElementById('caffeine-amount')
                 const water = document.getElementById('water-amount')
                 const amountOfCaffeine = document.getElementById('drink-input');
                 const amountOfOunces = document.getElementById('oz-input');
-                const currCaffeine = caffeine.value;
 
                 // get the caffeineName passed in
                 const drinkName = (document.getElementById('drink-input').value).toLowerCase().replace(" ", "");
                 // Get the value from the input field
                 if (CaffineCount.has(drinkName)){
-                    console.log("yes");
-                    caffeine.value = currCaffeine - (CaffineCount[drinkName] * parseInt(amountOfOunces.value));
-                    print(caffeine.value);
-                    caffeine.innerHTML = caffeine.value;
+                    let drinkAmount = parseFloat(amountOfOunces.value) * CaffineCount.get(drinkName);
+                    caffeine.textContent = parseInt(caffeine.textContent) - drinkAmount;
                 }
                 else{
+                    // please display this on screen if possible
                     console.log(`${drinkName} is not available`);
-                }
-                console.log("end")
-            // });
-            
+                }        
         }
     </script>
 </body>
