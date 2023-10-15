@@ -74,3 +74,8 @@ body {
     top: 75%;
     left: 60%;
 }
+
+.top {
+    background-color: #A98467;
+    color:rgb(255, 255, 255);
+}
