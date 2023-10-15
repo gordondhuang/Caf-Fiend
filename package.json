@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "caf-fiend",
   "version": "1.0.0",
   "description": "",
@@ -12,6 +13,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "tesseract.js": "^5.0.2"
+    "tesseract.js": "^5.0.2",
+    "uniqid": "^5.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.6"
   }
 }
