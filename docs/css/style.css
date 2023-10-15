@@ -144,6 +144,9 @@ h1 {
     background-color: #6C584C;
     padding: 5px;
     border-radius: 4px;
+<<<<<<< HEAD
+>>>>>>> 0c0f1bb70078684a8cf6240d1578194b1fa6d27d
+=======
 }
 
 .inputbuttons img {
@@ -163,5 +166,6 @@ h1 {
     position: absolute;
     bottom: 60%;
     left: 80%;
+>>>>>>> main
 }
 
