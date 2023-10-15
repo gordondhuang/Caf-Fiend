@@ -153,15 +153,9 @@ h1 {
     width: 100px;
 }
 
-#search {
-    position: absolute;
-    bottom: 20%;
-    left: 80%;
-}
-
 #scan {
     position: absolute;
-    bottom: 60%;
+    top: 43%;
     left: 80%;
 }
 
