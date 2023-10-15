@@ -16,7 +16,7 @@ const caffeineData = {
     labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday','Saturday'],
     datasets: [{
         label: 'Caffeine',
-        data: [400, 400, 400, 400, 400, 400, 400], // Example data
+        data: [0, 0, 0, 0, 0, 0, 0], // Example data
         backgroundColor: 'rgba(108,88,76,1)', // Example background color
         borderColor: 'rgba(75, 192, 192, 1)', // Example border color
         borderWidth: 1, // Example border width
